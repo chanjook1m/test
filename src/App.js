@@ -36,7 +36,7 @@ function App() {
 
   return (
     <UserStore>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route path={'/'} element={<ProductField products={productData} />}></Route>
           <Route path={'tech'} element={<TechPage />}>

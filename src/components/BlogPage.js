@@ -1,6 +1,5 @@
 import { useContext } from 'react';
 import { UserContext } from '../store/user';
-
 export default function BlogPage() {
 
   const { user, dispatch } = useContext(UserContext);
