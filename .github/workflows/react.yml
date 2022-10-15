@@ -14,5 +14,8 @@ jobs:
       - run: npm run build --if-present
       - run: npm run build
       - name: Deploy
-        run: npm run deploy
+        run: 
+          git config --global user.name 'test'
+          git config --global user.email 'test@test.com'
+          npm run deploy
       
