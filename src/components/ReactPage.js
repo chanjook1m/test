@@ -1,4 +1,4 @@
-import { Link, Outlet } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import useSWR from 'swr';
@@ -27,7 +27,7 @@ import useSWR from 'swr';
 // ];
 
 export default function ReactPage() {
-  const [docs, setDocs] = useState([]);
+  // const [docs, setDocs] = useState([]);
 
   async function fetcher() {
     const res = await axios.get('https://jsonplaceholder.typicode.com/posts');

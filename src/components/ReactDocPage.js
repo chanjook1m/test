@@ -15,7 +15,7 @@ export default function ReactDocPage() {
     }
 
     fetchData();
-  }, []);
+  }, [params.docId]);
   return (
     <>
       <h3 onClick={() => navigate('/')}>눌러봐</h3>
