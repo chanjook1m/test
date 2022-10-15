@@ -1,4 +1,4 @@
-import { createContext, useState, useReducer } from 'react';
+import React, { createContext, useState, useReducer } from 'react';
 
 export const UserContext = createContext();
 
@@ -7,16 +7,15 @@ const initUser = {
   job: 'fe-developer',
 };
 
-export default function UserStore(props) {
-  const [job, setJob] = useState('fe-developer');
+export default function UserStore({ children }) {
+  // const [job, setJob] = useState('fe-developer');
 
   const userReducer = (state, action) => {
     switch (action.type) {
       case 'changeJob':
         return { ...state, job: action.text };
-        break;
       default:
-        break;
+        return null;
     }
   };
 
@@ -24,5 +23,5 @@ export default function UserStore(props) {
 
   console.log(user);
 
-  return <UserContext.Provider value={{ user, dispatch }}>{props.children}</UserContext.Provider>;
+  return <UserContext.Provider value={{ user, dispatch }}>{children}</UserContext.Provider>;
 }

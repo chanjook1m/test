@@ -1,14 +1,14 @@
 import './App.css';
-import Card from './components/Card';
-import getData from './cardData';
-import { useState, useEffect } from 'react';
-import SimpleForm from './components/SimpleForm';
-import UncontrolledForm from './components/UncontrolledForm';
-import Cat from './components/Cat';
-import CatParent from './components/CatParent';
-
-import ProductField from './components/ProductField';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+// import getData from './cardData';
+// import SimpleForm from './components/SimpleForm';
+// import UncontrolledForm from './components/UncontrolledForm';
+// import Cat from './components/Cat';
+// import CatParent from './components/CatParent';
+
+// import Card from './components/Card';
+import ProductField from './components/ProductField';
 import TechPage from './components/TechPage';
 import BlogPage from './components/BlogPage';
 import ReactPage from './components/ReactPage';
