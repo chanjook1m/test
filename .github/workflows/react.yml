@@ -14,5 +14,9 @@ jobs:
       - run: npm run build --if-present
       - run: npm run build
       - name: Deploy
-      - run: npm run deploy
+        run: |
+          git config --global user.name 'chanjook1m'
+          git config --global user.email '1z3r091@gmail.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} 
+          npm run deploy
       
