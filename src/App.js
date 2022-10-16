@@ -15,7 +15,6 @@ import ReactPage from './components/ReactPage';
 import ReactDocPage from './components/ReactDocPage';
 import UserStore from './store/user';
 
-
 function App() {
   const [productData, setProductData] = useState([]);
   const API_URL = 'http://localhost:5000/products';
@@ -33,18 +32,16 @@ function App() {
     });
   }, []);
 
-
   return (
     <UserStore>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route path={'/'} element={<ProductField products={productData} />}></Route>
           <Route path={'tech'} element={<TechPage />}>
-            <Route path='react' element={<ReactPage />}></Route>
-            <Route path='react/:docId' element={<ReactDocPage />}></Route>
+            <Route path="react" element={<ReactPage />}></Route>
+            <Route path="react/:docId" element={<ReactDocPage />}></Route>
           </Route>
           <Route path={'blog'} element={<BlogPage />}></Route>
-
         </Routes>
       </BrowserRouter>
     </UserStore>
@@ -68,9 +65,8 @@ export default App;
 //     email: '',
 //   });
 
-
 //   useEffect(() => {
-//     shuffle(data); 
+//     shuffle(data);
 //     data.splice(3);
 //     console.log('mount');
 //     console.log(data);

@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
-
+const test = 'a';
+const ttt = 'B';
 export default function UncontrolledForm() {
   const inputRef = useRef();
-
 
   const handleChange = (e) => {
     return e.target.value;
@@ -16,13 +16,7 @@ export default function UncontrolledForm() {
   return (
     <form onSubmit={handleSubmit}>
       <label>닉네임 : </label>
-      <input
-        type="text"
-        name="nickname"
-        onChange={handleChange}
-        ref={inputRef}
-      >
-      </input>
+      <input type="text" name="nickname" onChange={handleChange} ref={inputRef}></input>
 
       <input type="submit" value="제출"></input>
     </form>

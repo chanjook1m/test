@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import BoilingVerdict from "./BoilingVerdict";
-import TemperatureInput from "./TemperatureInput";
-
+import React, { useState } from 'react';
+import BoilingVerdict from './BoilingVerdict';
+import TemperatureInput from './TemperatureInput';
 
 export default function Calculator() {
   const [state, setState] = useState({
@@ -38,8 +37,8 @@ export default function Calculator() {
 
   return (
     <>
-      <TemperatureInput scale={"c"} temperature={celsius} onTemperatureChange={handleTemperatureChange} />
-      <TemperatureInput scale={"f"} temperature={fahrenheit} onTemperatureChange={handleTemperatureChange} />
+      <TemperatureInput scale={'c'} temperature={celsius} onTemperatureChange={handleTemperatureChange} />
+      <TemperatureInput scale={'f'} temperature={fahrenheit} onTemperatureChange={handleTemperatureChange} />
     </>
   );
 }

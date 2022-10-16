@@ -5,21 +5,16 @@ export default function ProductList({ products, searchText, inStock }) {
   let rows = [];
   let category = '';
 
-
-  products.forEach(product => {
+  products.forEach((product) => {
     if (product.name.indexOf(searchText) === -1) return;
     if (product.stocked !== inStock) return;
 
     if (category !== product.category) {
       category = product.category;
-      rows.push(
-        <Category key={product.category} category={product.category} />
-      );
+      rows.push(<Category key={product.category} category={product.category} />);
     }
 
-    rows.push(
-      <Item name={product.name} key={product.name} price={product.price} inStock={inStock} />
-    );
+    rows.push(<Item name={product.name} key={product.name} price={product.price} inStock={inStock} />);
   });
 
   return (
@@ -30,9 +25,7 @@ export default function ProductList({ products, searchText, inStock }) {
           <th>price</th>
         </tr>
       </thead>
-      <tbody>
-        {rows}
-      </tbody>
+      <tbody>{rows}</tbody>
     </table>
   );
-};
+}
