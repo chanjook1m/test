@@ -8,7 +8,7 @@ export default function CatParent() {
 
   return (
     <div>
-      <h4> 고양이가 세상을 구한다 ️</h4>
+      <h4> 고양이가 세상을 구한다 ️a</h4>
       <div>
         <Cat a={'a'} ref={catRef} />
       </div>
